@@ -61,9 +61,9 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-violet-500/20 rounded-2xl blur-2xl transform rotate-6" />
             <div className="relative bg-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 space-y-8">
               {[
-                { icon: Code2, title: 'Frontend Mastery', desc: 'React, Tailwind, Framer Motion', color: 'text-cyan-400' },
+                { icon: Code2, title: 'Frontend Mastery', desc: 'React, Tailwind, UX/UI Design', color: 'text-cyan-400' },
                 { icon: Server, title: 'Backend Robustness', desc: 'Node.js, Express, Databases', color: 'text-violet-400' },
-                { icon: Globe, title: 'DevOps & Cloud', desc: 'AWS, Docker, CI/CD', color: 'text-emerald-400' }
+                { icon: Globe, title: 'DevOps & Cloud', desc: 'AWS, Docker, CI/CD, SCRUM', color: 'text-emerald-400' }
               ].map((item, i) => (
                 <motion.div 
                   key={i}

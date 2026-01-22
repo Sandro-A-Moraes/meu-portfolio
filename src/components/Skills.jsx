@@ -8,28 +8,28 @@ const skillCategories = [
     title: 'Frontend',
     icon: Layout,
     color: 'from-cyan-400 to-blue-500',
-    skills: ['React', 'Tailwind CSS', 'TypeScript', 'Next.js', 'Framer Motion', 'Figma', 'HTML5/CSS3']
+    skills: ['React', 'Tailwind CSS', 'TypeScript', 'Bootstrap', 'Figma', 'HTML5/CSS3']
   },
   {
     id: 'backend',
     title: 'Backend',
     icon: Database,
     color: 'from-violet-400 to-purple-500',
-    skills: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'Prisma ORM', 'Redis', 'GraphQL']
+    skills: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'Prisma ORM', 'MYSQL', 'Mongoose', 'SQLite']
   },
   {
     id: 'devops',
     title: 'DevOps & Tools',
     icon: Cpu,
     color: 'from-emerald-400 to-green-500',
-    skills: ['Docker', 'AWS', 'Git/GitHub', 'CI/CD Pipelines', 'Linux', 'Nginx']
+    skills: ['Docker', 'AWS', 'Git/GitHub', 'CI/CD Pipelines', 'Linux']
   },
   {
     id: 'metodologias',
     title: 'Metodologias',
     icon: PenTool,
     color: 'from-orange-400 to-amber-500',
-    skills: ['Scrum', 'Kanban', 'Agile', 'Jira', 'Code Review', 'TDD']
+    skills: ['Scrum', 'Kanban', 'Agile', 'Trello', 'Git Flow0', 'TDD']
   }
 ];
 
