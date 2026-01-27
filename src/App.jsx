@@ -8,7 +8,7 @@ import Certifications from '@/components/Certifications';
 import Projects from '@/components/Projects';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
