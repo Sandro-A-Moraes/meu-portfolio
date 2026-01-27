@@ -8,6 +8,7 @@ import Certifications from '@/components/Certifications';
 import Projects from '@/components/Projects';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         </main>
         <Toaster />
       </div>
+      <Analytics />
     </>
   );
 }
