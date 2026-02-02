@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Code } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ProjectCard = ({ project, index, onClick }) => {
+  const { translations } = useLanguage();
   const handleGithubClick = (e) => {
     e.stopPropagation();
   };
@@ -79,10 +81,10 @@ const ProjectCard = ({ project, index, onClick }) => {
               className="flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors z-30"
             >
               <Github size={18} />
-              GitHub
+              {translations.projects.github}
             </a>
             <span className="flex items-center gap-2 text-sm font-medium text-slate-500 ml-auto group-hover:text-cyan-400 transition-colors">
-              Ver Detalhes &rarr;
+              {translations.projects.verDetalhes} &rarr;
             </span>
           </div>
         </div>

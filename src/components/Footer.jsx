@@ -6,9 +6,11 @@ import {
   FaWhatsapp,
   FaEnvelope
 } from 'react-icons/fa';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 
 const Footer = () => {
+  const { translations } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -20,24 +22,23 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 gap-12 mb-20">
           <div>
             <h2 className="text-4xl font-bold text-white mb-6 font-display">
-              Vamos construir algo <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">incrível</span>?
+              {translations.footer.titulo}
             </h2>
             <p className="text-slate-400 text-lg max-w-md leading-relaxed mb-8">
-              Estou sempre aberto a novos desafios e colaborações. Se você tem uma ideia inovadora, 
-              entre em contato e vamos transformá-la em realidade.
+              {translations.footer.descricao}
             </p>
             <a 
               href="https://api.whatsapp.com/send/?phone=5594991952034&text&type=phone_number&app_absent=0" target='_blank'
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-950 font-bold rounded-full hover:bg-cyan-400 transition-colors duration-300"
             >
-              Iniciar Conversa
+              {translations.footer.iniciarConversa}
             </a>
           </div>
 
           <div className="flex flex-col justify-between">
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <h3 className="text-white font-bold mb-4">Navegação</h3>
+                <h3 className="text-white font-bold mb-4">{translations.footer.navegacao}</h3>
                 <ul className="space-y-2">
                   {['Início', 'Sobre', 'Projetos', 'Contato'].map((item) => (
                     <li key={item}>
@@ -49,7 +50,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-white font-bold mb-4">Social</h3>
+                <h3 className="text-white font-bold mb-4">{translations.footer.social}</h3>
                 <div className="flex gap-4">
                   {[
                     { icon: FaGithub, href: 'https://github.com/Sandro-A-Moraes' },
@@ -76,10 +77,10 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {currentYear} Sandro Moraes. Todos os direitos reservados.
+            © {currentYear} Sandro Moraes. {translations.footer.direitos}
           </p>
           <p className="text-slate-500 text-sm flex items-center gap-1">
-            Feito com  React
+            {translations.footer.desenvolvido} React
           </p>
         </div>
       </div>

@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Languages } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navigation = () => {
+  const { translations, toggleLanguage, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { name: 'Início', href: '#hero' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Competências', href: '#skills' },
-    { name: 'Certificações', href: '#certifications' },
-    { name: 'Projetos', href: '#projects' },
-    { name: 'Contato', href: '#contact' }
+    { name: translations.nav.inicio, href: '#hero' },
+    { name: translations.nav.sobre, href: '#about' },
+    { name: translations.nav.competencias, href: '#skills' },
+    { name: translations.nav.certificacoes, href: '#certifications' },
+    { name: translations.nav.projetos, href: '#projects' },
+    { name: translations.nav.contato, href: '#contact' }
   ];
 
   useEffect(() => {
@@ -122,6 +124,14 @@ const Navigation = () => {
                 </a>
               );
             })}
+            {/* Language Toggle Button Desktop */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >
+              <Languages size={16} />
+              <span>{language === 'pt' ? 'EN' : 'PT'}</span>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -162,6 +172,17 @@ const Navigation = () => {
                   </motion.a>
                 );
               })}
+              {/* Language Toggle Button Mobile */}
+              <motion.button
+                onClick={toggleLanguage}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navItems.length * 0.05 }}
+                className="flex items-center gap-3 text-lg font-medium text-slate-400 hover:text-white transition-colors"
+              >
+                <Languages size={20} />
+                <span>{language === 'pt' ? 'English' : 'Português'}</span>
+              </motion.button>
             </div>
           </motion.div>
         )}

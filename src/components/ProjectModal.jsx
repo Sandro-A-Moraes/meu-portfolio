@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { X, Github, Code, Calendar, Layers } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
+  const { translations } = useLanguage();
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === 'Escape') onClose();
@@ -64,7 +66,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           <div>
             <div className="flex flex-wrap items-center gap-4 mb-4">
               <span className="px-3 py-1 text-xs font-bold text-cyan-400 bg-cyan-950/30 border border-cyan-500/30 rounded-full uppercase tracking-wider">
-                Project Details
+                {translations.projects.projectDetails}
               </span>
               <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
             </div>
@@ -76,11 +78,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             <div className="flex flex-wrap gap-4 text-slate-400 text-sm mb-6">
               <div className="flex items-center gap-2">
                 <Calendar size={16} className="text-cyan-400" />
-                <span>2024 Development</span>
+                <span>{translations.projects.development}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Layers size={16} className="text-violet-400" />
-                <span>Fullstack Architecture</span>
+                <span>{translations.projects.architecture}</span>
               </div>
             </div>
 
@@ -92,7 +94,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           <div>
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
               <Code size={20} className="text-cyan-400" />
-              Tecnologias
+              {translations.projects.tecnologiasModal}
             </h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
@@ -114,7 +116,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               className="flex items-center gap-2 px-6 py-3 bg-white text-slate-950 font-bold rounded-full hover:bg-cyan-400 transition-colors duration-300"
             >
               <Github size={20} />
-              Ver Código no GitHub
+              {translations.projects.verCodigo}
             </a>
           </div>
         </div>

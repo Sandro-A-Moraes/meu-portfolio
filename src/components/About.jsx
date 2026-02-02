@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Server, Globe } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
+  const { translations } = useLanguage();
   return (
     <section id="about" className="py-32 relative overflow-hidden ">
       {/* Background Gradients */}
@@ -20,28 +22,24 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-display">
-              Sobre <span className="text-cyan-400">Mim</span>
+              {translations.about.titulo1} <span className="text-cyan-400">{translations.about.titulo2}</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-8" />
             
             <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
               <p>
-                Sou um desenvolvedor FullStack apaixonado por criar arquiteturas robustas e interfaces imersivas. 
-                Minha abordagem combina precisão técnica com design intuitivo, garantindo que cada linha de código 
-                contribua para uma experiência de usuário excepcional.
+                {translations.about.descricao1}
               </p>
               <p>
-                Com forte base em ecossistemas JavaScript modernos, transito fluidamente entre a lógica complexa 
-                do backend e a interatividade refinada do frontend. Meu objetivo é sempre entregar software que 
-                não apenas funcione, mas que inspire.
+                {translations.about.descricao2}
               </p>
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-6">
               {[
-                { label: 'Frontend', value: 'Pixel Perfect' },
-                { label: 'Backend', value: 'Scalable' },
-                { label: 'Cloud', value: 'Secure' },
+                { label: translations.about.frontend, value: translations.about.pixelPerfect },
+                { label: translations.about.backend, value: translations.about.scalable },
+                { label: translations.about.cloud, value: translations.about.secure },
               ].map((stat, i) => (
                 <div key={i} className="border-l-2 border-white/10 pl-6">
                   <div className="text-2xl font-bold text-white font-display">{stat.label}</div>
@@ -61,9 +59,9 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-violet-500/20 rounded-2xl blur-2xl transform rotate-6" />
             <div className="relative bg-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 space-y-8">
               {[
-                { icon: Code2, title: 'Frontend Mastery', desc: 'React, Tailwind, UX/UI Design', color: 'text-cyan-400' },
-                { icon: Server, title: 'Backend Robustness', desc: 'Node.js, Express, Databases', color: 'text-violet-400' },
-                { icon: Globe, title: 'DevOps & Cloud', desc: 'AWS, Docker, CI/CD, SCRUM', color: 'text-emerald-400' }
+                { icon: Code2, title: translations.about.frontendMastery, desc: translations.about.frontendDesc, color: 'text-cyan-400' },
+                { icon: Server, title: translations.about.backendRobustness, desc: translations.about.backendDesc, color: 'text-violet-400' },
+                { icon: Globe, title: translations.about.devopsCloud, desc: translations.about.devopsDesc, color: 'text-emerald-400' }
               ].map((item, i) => (
                 <motion.div 
                   key={i}

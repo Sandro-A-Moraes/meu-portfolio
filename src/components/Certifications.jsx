@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Check, ExternalLink } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Certifications = () => {
+  const { translations } = useLanguage();
   return (
     <section id="certifications" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -13,7 +15,7 @@ const Certifications = () => {
           className="mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-display">
-            Certificações
+            {translations.certifications.titulo}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full" />
         </motion.div>
@@ -55,7 +57,7 @@ const Certifications = () => {
 
               <div className="flex items-center justify-between pt-6 border-t border-white/5">
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                  Verificado
+                  {translations.certifications.verificado}
                 </span>
                 <a href="https://drive.google.com/file/d/1K65P7bMYHH1vPqtNo14dgZDEhRJTrTj_/view?usp=sharing" target='_blank'>
                   <ExternalLink size={18} className="text-slate-500 group-hover:text-white transition-colors" />
@@ -100,7 +102,7 @@ const Certifications = () => {
 
               <div className="flex items-center justify-between pt-6 border-t border-white/5">
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                  Verificado
+                  {translations.certifications.verificado}
                 </span>
                 <a href="https://drive.google.com/file/d/1I4u78VPfaup_JFlOn2ZnABbevWmH-paM/view?usp=sharing" target='_blank'>
                   <ExternalLink size={18} className="text-slate-500 group-hover:text-white transition-colors" />
@@ -121,10 +123,10 @@ const Certifications = () => {
               <Award className="text-slate-600" size={32} />
             </div>
             <h3 className="text-lg font-bold text-slate-500 text-center font-display">
-              Próxima Meta
+              {translations.certifications.proximaMeta}
             </h3>
             <p className="text-slate-600 text-center text-sm mt-2">
-              Em breve novas conquistas
+              {translations.certifications.emBreve}
             </p>
           </motion.div>
         </div>

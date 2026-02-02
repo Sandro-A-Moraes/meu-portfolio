@@ -9,10 +9,11 @@ import Projects from '@/components/Projects';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Analytics } from "@vercel/analytics/react"
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Helmet>
         <title>Sandro Moraes - Desenvolvedor FullStack</title>
         <meta 
@@ -37,7 +38,7 @@ function App() {
         <Toaster />
       </div>
       <Analytics />
-    </>
+    </LanguageProvider>
   );
 }
 

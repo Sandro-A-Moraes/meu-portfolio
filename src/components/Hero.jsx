@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { translations } = useLanguage();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const y2 = useTransform(scrollY, [0, 500], [0, -150]);
@@ -59,7 +61,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
             </span>
-            <span className="text-xs font-medium text-cyan-100 tracking-wide uppercase">Disponível para Projetos</span>
+            <span className="text-xs font-medium text-cyan-100 tracking-wide uppercase">{translations.hero.disponivel}</span>
           </motion.div>
 
           {/* Title */}
@@ -78,7 +80,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Desenvolvedor <span className="text-cyan-400 font-semibold">FullStack</span> & Criador Digital
+            {translations.hero.subtitulo}
           </motion.h2>
           
           <motion.p 
@@ -87,7 +89,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Transformando ideias complexas em experiências digitais elegantes, escaláveis e de alto desempenho.
+            {translations.hero.descricao}
           </motion.p>
 
           <motion.div 
@@ -100,14 +102,14 @@ const Hero = () => {
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-full transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
-              Ver Projetos
+              {translations.hero.verProjetos}
               <ArrowRight size={20} />
             </button>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium rounded-full transition-all duration-300 backdrop-blur-sm hover:border-white/20"
             >
-              Entrar em Contato
+              {translations.hero.entrarContato}
             </button>
           </motion.div>
         </motion.div>

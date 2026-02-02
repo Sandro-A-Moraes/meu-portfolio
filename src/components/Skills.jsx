@@ -1,37 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Cpu, Database, Layout, PenTool } from 'lucide-react';
-
-const skillCategories = [
-  {
-    id: 'frontend',
-    title: 'Frontend',
-    icon: Layout,
-    color: 'from-cyan-400 to-blue-500',
-    skills: ['React', 'Tailwind CSS', 'TypeScript', 'Bootstrap', 'Figma', 'HTML5/CSS3']
-  },
-  {
-    id: 'backend',
-    title: 'Backend',
-    icon: Database,
-    color: 'from-violet-400 to-purple-500',
-    skills: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'Prisma ORM', 'MYSQL', 'Mongoose', 'SQLite']
-  },
-  {
-    id: 'devops',
-    title: 'DevOps & Tools',
-    icon: Cpu,
-    color: 'from-emerald-400 to-green-500',
-    skills: ['Docker', 'AWS', 'Git/GitHub', 'CI/CD Pipelines', 'Linux']
-  },
-  {
-    id: 'metodologias',
-    title: 'Metodologias',
-    icon: PenTool,
-    color: 'from-orange-400 to-amber-500',
-    skills: ['Scrum', 'Kanban', 'Agile', 'Trello', 'Git Flow0', 'TDD']
-  }
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const SkillCategory = ({ category, index }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -98,6 +68,39 @@ const SkillCategory = ({ category, index }) => {
 };
 
 const Skills = () => {
+  const { translations } = useLanguage();
+
+  const skillCategories = [
+    {
+      id: 'frontend',
+      title: translations.skills.frontend,
+      icon: Layout,
+      color: 'from-cyan-400 to-blue-500',
+      skills: ['React', 'Tailwind CSS', 'TypeScript', 'Bootstrap', 'Figma', 'HTML5/CSS3']
+    },
+    {
+      id: 'backend',
+      title: translations.skills.backend,
+      icon: Database,
+      color: 'from-violet-400 to-purple-500',
+      skills: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'Prisma ORM', 'MYSQL', 'Mongoose', 'SQLite']
+    },
+    {
+      id: 'devops',
+      title: translations.skills.devops,
+      icon: Cpu,
+      color: 'from-emerald-400 to-green-500',
+      skills: ['Docker', 'AWS', 'Git/GitHub', 'CI/CD Pipelines', 'Linux']
+    },
+    {
+      id: 'metodologias',
+      title: translations.skills.metodologias,
+      icon: PenTool,
+      color: 'from-orange-400 to-amber-500',
+      skills: ['Scrum', 'Kanban', 'Agile', 'Trello', 'Git Flow0', 'TDD']
+    }
+  ];
+
   return (
     <section id="skills" className="py-32 relative bg-slate-950">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -108,10 +111,10 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-display">
-            Competências <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">Técnicas</span>
+            {translations.skills.titulo1} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">{translations.skills.titulo2}</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Um conjunto abrangente de tecnologias e ferramentas modernas para construir o futuro da web.
+            {translations.skills.subtitulo}
           </p>
         </motion.div>
 
