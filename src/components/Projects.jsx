@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 import cyberWeb from '../assets/images/projects/cyber-web.png'
+import longevita from '../assets/images/projects/longevita.png'
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Projects = () => {
@@ -11,7 +12,7 @@ const Projects = () => {
 
   const projectsData = translations.projects.data.map(project => ({
     ...project,
-    image: project.image === 'cyberWeb' ? `${cyberWeb}` : project.image
+    image: project.image === 'cyberWeb' ? `${cyberWeb}` : project.image === 'longevita' ? `${longevita}` : project.image
   }));
 
   return (
