@@ -139,11 +139,11 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             id: 3,
-            title: "Quantum Social",
+            title: "Go Social",
             description:
-              "Rede social descentralizada focada em privacidade e controle de dados, utilizando criptografia de ponta a ponta e IPFS.",
+              "Rede social descentralizada focada em privacidade e controle de dados, para desenvolvedores e entusiastas, utilizando criptografia de ponta a ponta e IPFS.",
             fullDescription:
-              "Quantum Social é uma plataforma revolucionária construída sobre princípios da Web3. Ela devolve o controle dos dados aos usuários através de armazenamento descentralizado via IPFS e contratos inteligentes em Solidity. A interface React oferece uma experiência familiar e fluida, enquanto o backend garante que todas as comunicações sejam criptografadas de ponta a ponta. Recursos incluem identidades soberanas, feed sem algoritmos manipulativos e monetização direta para criadores.",
+              "Go Social é uma plataforma revolucionária construída sobre princípios de privacidade e controle de dados. A interface react está em desenvolvimento, mas o backend em Go já está funcional, garantindo que todas as comunicações sejam criptografadas de ponta a ponta. A plataforma oferece um ambiente seguro e privado, permitindo que os usuários tenham controle total sobre seus dados e interações. Recursos como identidades soberanas, feed sem algoritmos manipulativos e monetização direta para criadores estão sendo implementados para oferecer uma experiência única e segura.",
             image:
               "https://images.unsplash.com/photo-1614064641938-3bbee52942c7",
             technologies: [
@@ -156,7 +156,29 @@ export const LanguageProvider = ({ children }) => {
               "Hardhat",
               "Ethers.js",
             ],
-            github: "https://github.com",
+            github: "https://github.com/Sandro-A-Moraes/gosocial-frontend.git",
+            liveDemo: "https://example.com",
+          },
+          {
+            id: 4,
+            title: "Atlas",
+            description:
+              "Plataforma web de gestÃ£o laboratorial veterinÃ¡ria que organiza requisiÃ§Ãµes, coletas, triagem, laudos e integraÃ§Ã£o segura com sistema legado.",
+            fullDescription:
+              "Atlas Ã© um ecossistema laboratorial veterinÃ¡rio pensado para centralizar o fluxo entre clÃ­nicas, administraÃ§Ã£o, motoboys, laboratÃ³rio interno e usuÃ¡rios master. A plataforma controla a criaÃ§Ã£o de requisiÃ§Ãµes, rastreio por status, triagem de materiais, publicaÃ§Ã£o de laudos e a integraÃ§Ã£o com o legado Esmeralda apenas apÃ³s a validaÃ§Ã£o dos materiais. Tecnicamente, foi concebida como uma aplicaÃ§Ã£o web modular com foco em rastreabilidade, permissÃµes por perfil, resiliÃªncia operacional e fluxos assÃ­ncronos.",
+            image:
+              "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=1200&q=80",
+            technologies: [
+              "Next.js",
+              "React",
+              "TypeScript",
+              "Tailwind CSS",
+              "Zustand",
+              "TanStack Query",
+              "PostgreSQL",
+              "AI",
+            ],
+            github: "",
             liveDemo: "https://example.com",
           },
         ],
@@ -302,6 +324,28 @@ export const LanguageProvider = ({ children }) => {
               "Ethers.js",
             ],
             github: "https://github.com",
+            liveDemo: "https://example.com",
+          },
+          {
+            id: 4,
+            title: "Atlas",
+            description:
+              "Veterinary laboratory management web platform that organizes requisitions, collections, triage, reports, and secure legacy system integration.",
+            fullDescription:
+              "Atlas is a veterinary laboratory ecosystem designed to unify the flow between clinics, administrators, couriers, the internal lab, and master users. The platform manages exam requisitions, status-based traceability, material triage, report delivery, and integration with the Esmeralda legacy system only after material validation. From a technical perspective, it was conceived as a modular web platform focused on operational resilience, role-based permissions, and asynchronous workflows.",
+            image:
+              "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=1200&q=80",
+            technologies: [
+              "Next.js",
+              "React",
+              "TypeScript",
+              "Tailwind CSS",
+              "Zustand",
+              "TanStack Query",
+              "PostgreSQL",
+              "AI",
+            ],
+            github: "",
             liveDemo: "https://example.com",
           },
         ],
