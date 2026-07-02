@@ -163,9 +163,9 @@ export const LanguageProvider = ({ children }) => {
             id: 4,
             title: "Atlas",
             description:
-              "Plataforma web de gestÃ£o laboratorial veterinÃ¡ria que organiza requisiÃ§Ãµes, coletas, triagem, laudos e integraÃ§Ã£o segura com sistema legado.",
+              "Plataforma web de gestão laboratorial veterinária que organiza requisições, coletas, triagem, laudos e integração segura com sistema legado.",
             fullDescription:
-              "Atlas Ã© um ecossistema laboratorial veterinÃ¡rio pensado para centralizar o fluxo entre clÃ­nicas, administraÃ§Ã£o, motoboys, laboratÃ³rio interno e usuÃ¡rios master. A plataforma controla a criaÃ§Ã£o de requisiÃ§Ãµes, rastreio por status, triagem de materiais, publicaÃ§Ã£o de laudos e a integraÃ§Ã£o com o legado Esmeralda apenas apÃ³s a validaÃ§Ã£o dos materiais. Tecnicamente, foi concebida como uma aplicaÃ§Ã£o web modular com foco em rastreabilidade, permissÃµes por perfil, resiliÃªncia operacional e fluxos assÃ­ncronos.",
+              "Atlas é um ecossistema laboratorial veterinário pensado para centralizar o fluxo entre clínicas, administração, motoboys, laboratório interno e usuários master. A plataforma controla a criação de requisições, rastreio por status, triagem de materiais, publicação de laudos e a integração com o legado Esmeralda apenas após a validação dos materiais. Tecnicamente, foi concebida como uma aplicação web modular com foco em rastreabilidade, permissões por perfil, resiliência operacional e fluxos assíncronos.",
             image:
               "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=1200&q=80",
             technologies: [
